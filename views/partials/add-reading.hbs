@@ -1,0 +1,23 @@
+<form class="box" action="/station/{{station._id}}/addReading" method="POST">
+  <label>Enter New Reading:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter weather code" name="code" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter temperature" name="temp" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter wind Speed" name="windspeed" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter wind Direction" name="winddirection" />
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter pressure" name="pressure" />
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Track</button>
+</form>
