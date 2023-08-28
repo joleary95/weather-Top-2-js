@@ -1,27 +1,19 @@
-<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+<table class="table is-bordered is-narrow is-hoverable is-fullwidth">
   <thead>
     <tr>
-      <th>Code</th>
-      <th>Temp</th>
-      <th>Wind Speed</th>
-      <th>Pressure</th>
+      <th class="has-background-primary has-text-white has-text-centered">Code</th>
+      <th class="has-background-primary has-text-white has-text-centered">Temp</th>
+      <th class="has-background-primary has-text-white has-text-centered">Wind Speed</th>
+      <th class="has-background-primary has-text-white has-text-centered">Pressure</th>
     </tr>
   </thead>
   <tbody>
     {{#each station.readings}}
       <tr>
-        <td>
-          {{code}}
-        </td>
-        <td>
-          {{temp}}
-        </td>
-        <td>
-          {{windspeed}}
-        </td>
-        <td>
-          {{pressure}}
-        </td>
+        <td class="has-text-centered">{{code}}</td>
+        <td class="has-text-centered">{{temp}}</td>
+        <td class="has-text-centered">{{windspeed}}</td>
+        <td class="has-text-centered">{{pressure}}</td>
       </tr>
     {{/each}}
   </tbody>
