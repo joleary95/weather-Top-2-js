@@ -1,6 +1,6 @@
 import { readingList } from "../models/reading-list.js";
 import { stationList } from "../models/station-list.js";
-import { analytics } from "../utils/Analytics.js";
+import { analytics } from "../utils/analytics.js";
 
 export const stationController = {
   async index(request, response) {
