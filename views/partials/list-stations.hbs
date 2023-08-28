@@ -1,9 +1,11 @@
 {{#each stations}}
   <div class="box box-link-hover-shadow">
     <h2 class="title">
-      <a href="/station/{{_id}}">
-        {{title}}
-      </a>
+      {{title}}
+    </h2>
+    <a href="/station/{{_id}}" class="icon has-text-primary">
+        <i class="fas fa-folder"></i>
+    </a>
     </h2>
   </div>
 {{/each}}
