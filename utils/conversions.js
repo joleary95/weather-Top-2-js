@@ -82,7 +82,6 @@ export const conversions = {
   },
 
   async codeToWeatherDescription(code) {
-    // code is in numerical order increasing by 100. dividing by 100 to make the code more readable.
     switch (code) {
       case 100:
         return "Clear";
@@ -93,7 +92,7 @@ export const conversions = {
       case 400:
         return "Light Showers";
       case 500:
-        return "Heavy Showers"; // Added this case for code 5
+        return "Heavy Showers";
       case 600:
         return "Rain";
       case 700:
@@ -103,5 +102,65 @@ export const conversions = {
       default:
         return "Unknown";
     }
+  },
+
+  async findMinTemp(readings) {
+    let minTemp = Number.MAX_VALUE;
+    for (const reading of readings) {
+      if (reading.temp < minTemp) {
+        minTemp = reading.temp;
+      }
+    }
+    return minTemp;
+  },
+
+  async findMaxTemp(readings) {
+    let maxTemp = Number.MIN_VALUE;
+    for (const reading of readings) {
+      if (reading.temp > maxTemp) {
+        maxTemp = reading.temp;
+      }
+    }
+    return maxTemp;
+  },
+
+  async findMinPressure(readings) {
+    let minPressure = Number.MAX_VALUE;
+    for (const reading of readings) {
+      if (reading.pressure < minPressure) {
+        minPressure = reading.pressure;
+      }
+    }
+    return minPressure;
+  },
+
+  async findMaxPressure(readings) {
+    let maxPressure = Number.MIN_VALUE;
+    for (const reading of readings) {
+      if (reading.pressure > maxPressure) {
+        maxPressure = reading.pressure;
+      }
+    }
+    return maxPressure;
+  },
+
+  async findMinWindSpeed(readings) {
+    let minWindSpeed = Number.MAX_VALUE;
+    for (const reading of readings) {
+      if (reading.windspeed < minWindSpeed) {
+        minWindSpeed = reading.windspeed;
+      }
+    }
+    return minWindSpeed;
+  },
+
+  async findMaxWindSpeed(readings) {
+    let maxWindSpeed = Number.MIN_VALUE;
+    for (const reading of readings) {
+      if (reading.windspeed > maxWindSpeed) {
+        maxWindSpeed = reading.windspeed;
+      }
+    }
+    return maxWindSpeed;
   },
 };
