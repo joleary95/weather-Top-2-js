@@ -2,36 +2,16 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "Duncannon",
-      "_id": "7f3c3a12-87bd-4070-8dd3-3d0899b8e8dc"
-    },
-    {
-      "title": "Dunmore East",
-      "_id": "d2647d7e-63d7-4168-93a8-6541047a85f8"
-    },
-    {
       "title": "Rosslare",
-      "_id": "78b6846a-c819-456b-b8ae-130ba1313f16"
+      "latitude": "54.00789",
+      "longitude": "-35.67854",
+      "_id": "2aa949d2-6672-48ce-8a69-e4386edc4e61"
     },
     {
-      "title": "",
-      "_id": "969ac018-2ea2-4343-8dcd-d67b7d4f71ff"
-    },
-    {
-      "title": "r",
-      "_id": "b707f133-92f0-48e1-a131-f2b48f40c70a"
-    },
-    {
-      "title": "",
-      "latitude": "54",
-      "longitude": "",
-      "_id": "0583041a-cb61-4615-b302-ab1cd4510e92"
-    },
-    {
-      "title": "cheekpoint",
-      "latitude": "47.66489",
-      "longitude": "-54.00987",
-      "_id": "a44e6bd0-46d9-46f3-86b5-d21eb3340d2c"
+      "title": "Tramore",
+      "latitude": "27.07895",
+      "longitude": "54.27789",
+      "_id": "817be30e-25aa-41ce-baf3-4b85001d8ae3"
     }
   ]
 }
