@@ -42,6 +42,12 @@
         {{latestWeather.tempC}}&#8451;
         <br />
         {{latestWeather.tempF}}&#8457;
+        <br />
+        Min Temp &#x21E5;
+        {{latestWeather.minTemp}}&#8451;
+        <br />
+        Max Temp &#x21E5;
+        {{latestWeather.maxTemp}}&#8451;
       </div>
     </div>
   </div>
@@ -56,11 +62,16 @@
         {{latestWeather.windSpeedBft}}
         Bft
         <br />
+        Min &#x21E5;{{latestWeather.minWindSpeed}}
+        <br />
+        Max &#x21E5;{{latestWeather.maxWindSpeed}}
+        <br />
         {{latestWeather.windDirection}}
         <br />
         <p>feels like
           <br />
-          {{latestWeather.windChill}}</p>
+          {{latestWeather.windChill}}<br />
+        </p>
       </div>
     </div>
   </div>
@@ -74,6 +85,10 @@
       <div class="card-content" style="height: 200px;">
         {{latestWeather.pressure}}
         &#13169;
+        <br />
+        Min &#x21E5;{{latestWeather.minPressure}}
+        <br />
+        Max &#x21E5;{{latestWeather.maxPressure}}
       </div>
     </div>
   </div>
