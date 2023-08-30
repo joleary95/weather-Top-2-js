@@ -1,17 +1,1 @@
-{
-  "file": "./models/stations.json",
-  "stations": [
-    {
-      "title": "Rosslare",
-      "latitude": "54.00789",
-      "longitude": "-35.67854",
-      "_id": "2aa949d2-6672-48ce-8a69-e4386edc4e61"
-    },
-    {
-      "title": "Tramore",
-      "latitude": "27.07895",
-      "longitude": "54.27789",
-      "_id": "817be30e-25aa-41ce-baf3-4b85001d8ae3"
-    }
-  ]
-}
+{"file":"./models/stations.json","stations":[]}
