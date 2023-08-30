@@ -1,1 +1,19 @@
-{"file":"./models/stations.json","stations":[]}
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "title": "Rosslare",
+      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
+      "latitude": "54.07895",
+      "longitude": "-47.5786",
+      "_id": "7ea9f613-37ec-4f0e-9b0b-7d546acd0731"
+    },
+    {
+      "title": "Tramore",
+      "userid": "9e6f22f9-a7ce-4fa9-be61-ed8223360aac",
+      "latitude": "54.07895",
+      "longitude": "45.0056",
+      "_id": "8f0d9f68-3dfb-4dd5-bcbd-41e8ed03919c"
+    }
+  ]
+}

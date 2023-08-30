@@ -7,6 +7,13 @@
       "email": "m.simpson@mail.com",
       "password": "simpson",
       "_id": "f18eaab7-85fb-464f-b386-d9de68cde4ff"
+    },
+    {
+      "firstName": "bart",
+      "lastName": "Simpson",
+      "email": "b.simpson@mail.com",
+      "password": "simpson",
+      "_id": "9e6f22f9-a7ce-4fa9-be61-ed8223360aac"
     }
   ]
 }
