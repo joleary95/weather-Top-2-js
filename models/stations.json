@@ -4,16 +4,23 @@
     {
       "title": "Rosslare",
       "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
-      "latitude": "54.07895",
-      "longitude": "-47.5786",
-      "_id": "7ea9f613-37ec-4f0e-9b0b-7d546acd0731"
+      "latitude": "52.2513",
+      "longitude": "6.3415",
+      "_id": "df8e0426-65a5-4530-b321-d0bbf6be03e2"
     },
     {
-      "title": "Tramore",
+      "title": "cheekpoint",
+      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
+      "latitude": "65.0089",
+      "longitude": "6.3415",
+      "_id": "de3dd907-040e-4a1f-845a-56dcc7287237"
+    },
+    {
+      "title": "Dunmore",
       "userid": "9e6f22f9-a7ce-4fa9-be61-ed8223360aac",
-      "latitude": "54.07895",
-      "longitude": "45.0056",
-      "_id": "8f0d9f68-3dfb-4dd5-bcbd-41e8ed03919c"
+      "latitude": "52.1528",
+      "longitude": "6.9948",
+      "_id": "7206d68b-bce0-4143-b6cb-9c3489446400"
     }
   ]
 }

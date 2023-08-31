@@ -1,10 +1,26 @@
 {{> menu}}
 
 <section class="section">
- <div class="title has-text-centered">
-  {{station.title}}
- </div>
-  {{> cards}}
-  {{> add-reading}}
-  {{> list-readings}}
+  <div class="container">
+    <div class="notification is-black has-text-centered">
+      <div class="title is-size-3">
+        {{station.title}}
+      </div>
+      <p class="is-size-5">
+        Longitude: <span class="has-text-weight-semibold">{{station.longitude}}</span>
+        Latitude: <span class="has-text-weight-semibold">{{station.latitude}}</span>
+      </p>
+    </div>
+    <div class="mt-5">
+      {{> cards}}
+    </div>
+    <div class="mt-5">
+    {{> add-reading}}
+    </div>
+    <div class="mt-5">
+    {{> list-readings}}
+    </div>
+  </div>
 </section>
+
+
