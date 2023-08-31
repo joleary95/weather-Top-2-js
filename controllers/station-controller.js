@@ -21,6 +21,7 @@ export const stationController = {
       windspeed: Number(request.body.windspeed),
       pressure: Number(request.body.pressure),
       winddirection: Number(request.body.winddirection),
+      timestamp: Number(request.body.timestamp),
     };
     console.log(`adding reading ${newReading.code}`);
     await readingList.addReading(station._id, newReading);
