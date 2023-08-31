@@ -13,6 +13,7 @@ export const readingList = {
     await db.read();
     reading._id = v4();
     reading.stationid = stationId;
+    reading.timestamp = new Date().toLocaleString();
     db.data.readings.push(reading);
     await db.write();
     return reading;
