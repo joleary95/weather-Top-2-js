@@ -6,6 +6,10 @@ export const analytics = {
   async updateWeather(stationId) {
     const latestReading = await readingList.getLatestReadingByStationId(stationId);
     const readings = await readingList.getReadingsByStationId(stationId);
+    const stations = await stationList.getStationById(stationId);
+    const longitude = stations.longitude;
+    const latitude = stations.latitude;
+    const title = stations.title;
     if (latestReading) {
       const tempC = latestReading.temp;
       const tempF = await conversions.celsiusToFahrenheit(tempC);
@@ -34,6 +38,9 @@ export const analytics = {
         maxWindSpeed: maxWindSpeed,
         minPressure: minPressure,
         maxPressure: maxPressure,
+        longitude: longitude,
+        latitude: latitude,
+        title: title,
       };
     }
     return null;

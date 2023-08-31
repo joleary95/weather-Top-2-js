@@ -1,17 +1,19 @@
 {{#each stations}}
   <div class="box box-link-hover-shadow">
-    <h2 class="title">
+    <h2 class="title has-text-centered">
       {{title}}
     </h2>
     <section class="content">
-      <p class="has-text-gray">
+      <p class="has-text-gray has-text-centered">
         Latitude:
         {{latitude}}
-        <br />
         Longitude:
         {{longitude}}
       </p>
     </section>
+    {{#with (lookup ../latestWeatherData @index)}}
+      {{> cards latestWeather=this}}
+    {{/with}}
     <a href="/station/{{_id}}" class="icon has-text-primary">
       <i class="fas fa-folder"></i>
     </a>
