@@ -6,7 +6,7 @@ export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stations = await stationList.getStationsByUserId(loggedInUser._id);
-    const sortedStations = stations.slice().sort((a, b) => a.title.localeCompare(b.title));
+    const sortedStations = stations.sort((a, b) => a.title.localeCompare(b.title));
     const latestWeatherDashboard = await Promise.all(stations.map((station) => analytics.updateWeather(station._id)));
 
     const viewData = {
