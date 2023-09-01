@@ -18,9 +18,9 @@
         <td class="has-text-centered">{{pressure}}</td>
         <td class="has-text-centered">{{timestamp}}</td>
         <td>
-          <a href="/stations/{{station.id}}/deletereading/${reading.id}" class="icon has-text-danger has-text-centered">
-            <i class="fas fa-trash"></i>
-          </a>
+         <a href="/station/{{../station._id}}/deletereading/{{_id}}" class="button">
+          {{>icons/delete}}
+        </a>
         </td>
       </tr>
     {{/each}}

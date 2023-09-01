@@ -38,7 +38,7 @@ export const readingList = {
 
   async deleteReading(id) {
     await db.read();
-    const index = db.data.readingss.findIndex((reading) => reading._id === id);
+    const index = db.data.readings.findIndex((reading) => reading._id === id);
     db.data.readings.splice(index, 1);
     await db.write();
   },

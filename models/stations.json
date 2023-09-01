@@ -1,33 +1,4 @@
 {
   "file": "./models/stations.json",
-  "stations": [
-    {
-      "title": "a",
-      "userid": "9e6f22f9-a7ce-4fa9-be61-ed8223360aac",
-      "latitude": "54.07895",
-      "longitude": "6.3415",
-      "_id": "d67e13c4-aa30-46ae-886b-4ed3c3f69757"
-    },
-    {
-      "title": "b",
-      "userid": "9e6f22f9-a7ce-4fa9-be61-ed8223360aac",
-      "latitude": "65.0089",
-      "longitude": "6.3415",
-      "_id": "7d50e552-c0ec-4700-a694-23f0456fbb39"
-    },
-    {
-      "title": "Dun Laoghaire",
-      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
-      "latitude": "65.0089",
-      "longitude": "6.3415",
-      "_id": "d626b100-f7d0-4e9f-821e-e15d57d94e2f"
-    },
-    {
-      "title": "Cheekpoint",
-      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
-      "latitude": "65.0089",
-      "longitude": "6.3415",
-      "_id": "b583bd43-f9c4-4580-8a9b-6e120b925a45"
-    }
-  ]
+  "stations": []
 }

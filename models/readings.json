@@ -1,45 +1,4 @@
 {
   "file": "./models/readings.json",
-  "readings": [
-    {
-      "code": 300,
-      "temp": 35,
-      "windspeed": 50,
-      "pressure": 1001,
-      "winddirection": 90,
-      "timestamp": "9/1/2023, 2:16:12 AM",
-      "_id": "c2824823-74a6-4473-b7ed-e200cc02e1e8",
-      "stationid": "d67e13c4-aa30-46ae-886b-4ed3c3f69757"
-    },
-    {
-      "code": 300,
-      "temp": 16,
-      "windspeed": 50,
-      "pressure": 1001,
-      "winddirection": 90,
-      "timestamp": "9/1/2023, 2:16:37 AM",
-      "_id": "90311826-a16d-4ca8-9032-4b4a3bf0a91d",
-      "stationid": "7d50e552-c0ec-4700-a694-23f0456fbb39"
-    },
-    {
-      "code": 400,
-      "temp": 35,
-      "windspeed": 40,
-      "pressure": 850,
-      "winddirection": 220,
-      "timestamp": "9/1/2023, 2:17:30 AM",
-      "_id": "f6af8e0d-201a-40c2-9b0f-3322ebc96dc3",
-      "stationid": "d626b100-f7d0-4e9f-821e-e15d57d94e2f"
-    },
-    {
-      "code": 300,
-      "temp": 16,
-      "windspeed": 40,
-      "pressure": 500,
-      "winddirection": 90,
-      "timestamp": "9/1/2023, 3:17:13 AM",
-      "_id": "71067e12-5037-47cb-b124-0ef90e28071d",
-      "stationid": "b583bd43-f9c4-4580-8a9b-6e120b925a45"
-    }
-  ]
+  "readings": []
 }
