@@ -2,13 +2,6 @@
   "file": "./models/stations.json",
   "stations": [
     {
-      "title": "Rosslare",
-      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
-      "latitude": "52.2513",
-      "longitude": "6.3415",
-      "_id": "df8e0426-65a5-4530-b321-d0bbf6be03e2"
-    },
-    {
       "title": "cheekpoint",
       "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
       "latitude": "65.0089",

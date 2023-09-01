@@ -6,6 +6,7 @@
       <th class="has-background-primary has-text-white has-text-centered">Wind Speed</th>
       <th class="has-background-primary has-text-white has-text-centered">Pressure</th>
       <th class="has-background-primary has-text-white has-text-centered">Time Stamp</th>
+      <th class="has-background-primary has-text-white has-text-centered"></th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,11 @@
         <td class="has-text-centered">{{windspeed}}</td>
         <td class="has-text-centered">{{pressure}}</td>
         <td class="has-text-centered">{{timestamp}}</td>
+        <td>
+          <a href="/stations/{{station.id}}/deletereading/${reading.id}" class="icon has-text-danger has-text-centered">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
       </tr>
     {{/each}}
   </tbody>
