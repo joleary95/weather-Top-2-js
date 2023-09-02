@@ -1,0 +1,33 @@
+{{> menu active="profile"}}
+
+<section class="section">
+  <h1 class="title">Profile</h1>
+  <p>First Name: {{user.firstName}} <br>
+     Last Name: {{user.lastName}} <br>
+     Email: {{user.email}} <br>
+  </p>
+
+  <form action="/updateprofile" method="POST">
+    <label class="label">Edit Name</label>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter new first name" name="firstName">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter new last name" name="lastName">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Edit Email</label>
+      <input class="input" type="text" placeholder="Enter new email" name="email">
+    </div>
+    <!-- Add other profile fields here -->
+    <div class="field is-grouped">
+      <button class="button is-link" type="submit">Save Changes</button>
+    </div>
+  </form>
+</section>
+
+

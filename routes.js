@@ -8,6 +8,8 @@ import { stationController } from "./controllers/station-controller.js";
 export const router = express.Router();
 
 router.get("/", accountsController.index);
+router.get("/profile", accountsController.getProfile);
+router.post("/updateprofile", accountsController.updateProfile);
 router.get("/login", accountsController.login);
 router.get("/signup", accountsController.signup);
 router.get("/logout", accountsController.logout);

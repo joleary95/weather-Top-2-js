@@ -1,4 +1,15 @@
 {
   "file": "./models/readings.json",
-  "readings": []
+  "readings": [
+    {
+      "code": 400,
+      "temp": 16,
+      "windspeed": 50,
+      "pressure": 850,
+      "winddirection": 220,
+      "timestamp": "9/1/2023, 10:23:47 PM",
+      "_id": "30acc6a4-86d2-44bf-a808-2a3f600cf22d",
+      "stationid": "3dc7baa4-dae0-499f-84bc-c18a9a351171"
+    }
+  ]
 }

@@ -17,6 +17,22 @@ export const userStore = {
     return user;
   },
 
+  async updateUser(updatedUser) {
+    await db.read();
+    const emailInUse = db.data.users.some((user) => user.email === updatedUser.email);
+    const index = db.data.users.findIndex((user) => user.email === emailInUse.email);
+
+    if (index !== -1) {
+      db.data.users[index] = updatedUser;
+      await db.write();
+      console.log("User updated successfully:", updatedUser); // print user
+      return updatedUser;
+    } else {
+      console.log("User not found for update.");
+      return null; //If stattement to determine if updateuser is working
+    }
+  },
+
   async getUserById(id) {
     await db.read();
     return db.data.users.find((user) => user._id === id);

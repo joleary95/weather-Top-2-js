@@ -1,4 +1,12 @@
 {
   "file": "./models/stations.json",
-  "stations": []
+  "stations": [
+    {
+      "title": "Rosslare",
+      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
+      "latitude": "54.00789",
+      "longitude": "6.54673",
+      "_id": "3dc7baa4-dae0-499f-84bc-c18a9a351171"
+    }
+  ]
 }
