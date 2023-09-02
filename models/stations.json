@@ -3,10 +3,17 @@
   "stations": [
     {
       "title": "Rosslare",
-      "userid": "f18eaab7-85fb-464f-b386-d9de68cde4ff",
-      "latitude": "54.00789",
-      "longitude": "6.54673",
-      "_id": "3dc7baa4-dae0-499f-84bc-c18a9a351171"
+      "userid": "db06cfa0-8f21-4ef3-91e2-2c2035665b2a",
+      "latitude": "54.07896",
+      "longitude": "6.789605",
+      "_id": "64362ea7-3b1d-4fbf-a223-b897f2328bdd"
+    },
+    {
+      "title": "Cheekpoint",
+      "userid": "db06cfa0-8f21-4ef3-91e2-2c2035665b2a",
+      "latitude": "54.07895",
+      "longitude": "35.08967",
+      "_id": "4a62f32d-ebae-45bf-a041-b555335065fa"
     }
   ]
 }
