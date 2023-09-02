@@ -17,19 +17,28 @@ export const userStore = {
     return user;
   },
 
-  async updateUser(updatedUser) {
+  async updateUser(updatedUser, currentEmail) {
     await db.read();
-    const emailInUse = db.data.users.some((user) => user.email === updatedUser.email);
-    const index = db.data.users.findIndex((user) => user.email === emailInUse.email);
+    /* getting current index for current user - using the email stored in the database. 
+    !!! use of current and not updatedemail very important here as we have not wrote to db yet!!!
+    */
+    const index = db.data.users.findIndex((user) => user.email === currentEmail);
 
+    /* checking if found the correct index - 
+    update current user details with updatedUser fields.
+    return index if found to update cookie.
+    */
     if (index !== -1) {
-      db.data.users[index] = updatedUser;
+      db.data.users[index].firstName = updatedUser.firstName;
+      db.data.users[index].lastName = updatedUser.lastName;
+      db.data.users[index].email = updatedUser.email;
+
       await db.write();
-      console.log("User updated successfully:", updatedUser); // print user
-      return updatedUser;
+      console.log("User updated successfully:", db.data.users[index]);
+      return db.data.users[index];
     } else {
       console.log("User not found for update.");
-      return null; //If stattement to determine if updateuser is working
+      return null;
     }
   },
 

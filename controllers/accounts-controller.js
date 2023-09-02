@@ -67,28 +67,27 @@ export const accountsController = {
     const updatedUserData = request.body;
     const loggedInUser = await accountsController.getLoggedInUser(request);
 
-    // Store the old email for updating the cookie
-    const oldEmail = loggedInUser.email;
+    // store current email to pass to update user to find correct index & to update the email within the cookie
+    const currentEmail = loggedInUser.email;
 
-    // Update user details, including the email
+    // Update current details with new details added via form request
     loggedInUser.firstName = updatedUserData.firstName;
     loggedInUser.lastName = updatedUserData.lastName;
     loggedInUser.email = updatedUserData.email;
 
     console.log("Updated User Data:", loggedInUser);
 
-    // Update the user in the data store
-    const updatedUser = await userStore.updateUser(loggedInUser);
+    // Update the user in the db
+    const updatedUser = await userStore.updateUser(loggedInUser, currentEmail);
 
     if (updatedUser) {
-      // Update the email in the cookie
+      // Update the email in the cookie if new 'updatedUser' exists
       response.cookie("station", updatedUser.email);
 
       console.log("Updated User Data:", updatedUser);
     } else {
       console.log("User not found for update.");
     }
-
     response.redirect("/profile");
   },
 };
