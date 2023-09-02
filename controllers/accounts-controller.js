@@ -47,6 +47,48 @@ export const accountsController = {
 
   async getLoggedInUser(request) {
     const userEmail = request.cookies.station;
-    return await userStore.getUserByEmail(userEmail);
+    console.log("User email from cookie:", userEmail);
+    const user = await userStore.getUserByEmail(userEmail);
+    console.log("Logged-in user:", user);
+    return user;
+  },
+
+  async getProfile(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+    console.log("Logged-in user:", loggedInUser);
+    const viewData = {
+      title: "Profile",
+      user: loggedInUser,
+    };
+    response.render("profile-view", viewData);
+  },
+
+  async updateProfile(request, response) {
+    const updatedUserData = request.body;
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+
+    // Store the old email for updating the cookie
+    const oldEmail = loggedInUser.email;
+
+    // Update user details, including the email
+    loggedInUser.firstName = updatedUserData.firstName;
+    loggedInUser.lastName = updatedUserData.lastName;
+    loggedInUser.email = updatedUserData.email;
+
+    console.log("Updated User Data:", loggedInUser);
+
+    // Update the user in the data store
+    const updatedUser = await userStore.updateUser(loggedInUser);
+
+    if (updatedUser) {
+      // Update the email in the cookie
+      response.cookie("station", updatedUser.email);
+
+      console.log("Updated User Data:", updatedUser);
+    } else {
+      console.log("User not found for update.");
+    }
+
+    response.redirect("/profile");
   },
 };

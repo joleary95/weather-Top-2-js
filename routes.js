@@ -8,6 +8,8 @@ import { stationController } from "./controllers/station-controller.js";
 export const router = express.Router();
 
 router.get("/", accountsController.index);
+router.get("/profile", accountsController.getProfile);
+router.post("/updateprofile", accountsController.updateProfile);
 router.get("/login", accountsController.login);
 router.get("/signup", accountsController.signup);
 router.get("/logout", accountsController.logout);
@@ -16,6 +18,8 @@ router.post("/authenticate", accountsController.authenticate);
 
 router.get("/dashboard", dashboardController.index);
 router.post("/dashboard/addstation", dashboardController.addStation);
+router.get("/dashboard/deletestation/:id", dashboardController.deleteStation);
 router.get("/station/:id", stationController.index);
 router.post("/station/:id/addReading", stationController.addReading);
+router.get("/station/:stationid/deletereading/:readingid", stationController.deleteReading);
 router.get("/about", aboutController.index);

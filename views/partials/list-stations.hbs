@@ -11,11 +11,14 @@
         {{longitude}}
       </p>
     </section>
-    {{#with (lookup ../latestWeatherData @index)}}
+    {{#with (lookup ../latestWeatherDashboard @index)}}
       {{> cards latestWeather=this}}
     {{/with}}
     <a href="/station/{{_id}}" class="icon has-text-primary">
-      <i class="fas fa-folder"></i>
+      {{>icons/open}}
     </a>
+    <a href="/dashboard/deletestation/{{_id}}" class="button">
+    {{>icons/delete}}
+  </a>
   </div>
 {{/each}}

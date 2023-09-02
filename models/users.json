@@ -2,9 +2,9 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "Marge",
+      "firstName": "Lisa",
       "lastName": "Simpson",
-      "email": "m.simpson@mail.com",
+      "email": "lisa.simpson@mail.com",
       "password": "simpson",
       "_id": "f18eaab7-85fb-464f-b386-d9de68cde4ff"
     },
