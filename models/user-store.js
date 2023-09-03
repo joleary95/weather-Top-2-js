@@ -32,6 +32,7 @@ export const userStore = {
       db.data.users[index].firstName = updatedUser.firstName;
       db.data.users[index].lastName = updatedUser.lastName;
       db.data.users[index].email = updatedUser.email;
+      db.data.users[index].password = updatedUser.password;
 
       await db.write();
       console.log("User updated successfully:", db.data.users[index]);
