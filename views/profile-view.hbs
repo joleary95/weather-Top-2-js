@@ -1,33 +1,60 @@
 {{> menu active="profile"}}
 
 <section class="section">
-  <h1 class="title">Profile</h1>
-  <p>First Name: {{user.firstName}} <br>
-     Last Name: {{user.lastName}} <br>
-     Email: {{user.email}} <br>
-  </p>
-
-  <form action="/updateprofile" method="POST">
-    <label class="label">Edit Name</label>
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <input class="input" type="text" placeholder="Enter new first name" name="firstName">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="card has-background-info">
+          <div class="card-content">
+            <figure class="image is-128x128 is-pulled-right"> <!-- Adjust the size as needed -->
+              {{> icons/profile}}
+            </figure>
+            <h1 class="title has-text-white">Profile</h1>
+            <p class="has-text-white">
+              First Name:
+              {{user.firstName}}
+              <br />
+              Last Name:
+              {{user.lastName}}
+              <br />
+              Email:
+              {{user.email}}
+              <br />
+            </p>
+          </div>
         </div>
-        <div class="field">
-          <input class="input" type="text" placeholder="Enter new last name" name="lastName">
+      </div>
+      <div class="column is-6">
+        <div class="card has-background-info">
+          <div class="card-content">
+            <h1 class="title has-text-white">Edit Profile</h1>
+            <form action="/updateprofile" method="POST">
+              <div class="field">
+                <label class="label has-text-white">Edit First Name</label>
+                <input class="input" type="text" placeholder="Enter new first name" name="firstName" />
+              </div>
+              <div class="field">
+                <label class="label has-text-white">Edit Last Name</label>
+                <input class="input" type="text" placeholder="Enter new last name" name="lastName" />
+              </div>
+              <div class="field">
+                <label class="label has-text-white">Edit Email</label>
+                <input class="input" type="text" placeholder="Enter new email" name="email" />
+              </div>
+              <div class="field">
+                <label class="label has-text-white">New Password</label>
+                <input class="input" type="password" placeholder="Enter new password" name="password" />
+              </div>
+              <!-- Add other profile fields here -->
+              <div class="field is-grouped">
+                <button class="button is-link" type="submit">Save Changes</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="field">
-      <label class="label">Edit Email</label>
-      <input class="input" type="text" placeholder="Enter new email" name="email">
-    </div>
-    <!-- Add other profile fields here -->
-    <div class="field is-grouped">
-      <button class="button is-link" type="submit">Save Changes</button>
-    </div>
-  </form>
+  </div>
 </section>
 
 

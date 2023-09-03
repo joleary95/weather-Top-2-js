@@ -74,6 +74,7 @@ export const accountsController = {
     loggedInUser.firstName = updatedUserData.firstName;
     loggedInUser.lastName = updatedUserData.lastName;
     loggedInUser.email = updatedUserData.email;
+    loggedInUser.password = updatedUserData.password;
 
     console.log("Updated User Data:", loggedInUser);
 

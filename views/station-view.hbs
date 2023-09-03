@@ -2,11 +2,11 @@
 
 <section class="section">
   <div class="container">
-    <div class="notification is-black has-text-centered">
-      <div class="title is-size-3">
+    <div class="notification has-background-primary has-text-centered">
+      <div class="title is-size-3 has-text-white">
         {{station.title}}
       </div>
-      <p class="is-size-5">
+      <p class="is-size-5 has-text-white">
         Longitude: <span class="has-text-weight-semibold">{{station.longitude}}</span>
         Latitude: <span class="has-text-weight-semibold">{{station.latitude}}</span>
       </p>
@@ -15,10 +15,10 @@
       {{> cards}}
     </div>
     <div class="mt-5">
-    {{> add-reading}}
+      {{> add-reading}}
     </div>
     <div class="mt-5">
-    {{> list-readings}}
+      {{> list-readings}}
     </div>
   </div>
 </section>

@@ -13,13 +13,15 @@ export const analytics = {
     if (latestReading) {
       const tempC = latestReading.temp;
       const tempF = await conversions.celsiusToFahrenheit(tempC);
+      const minTemp = await conversions.findMinTemp(readings);
+      const maxTemp = await conversions.findMaxTemp(readings);
+      const tempTrend = await this.tempTrend(readings);
+      console.log(tempTrend);
       const pressure = latestReading.pressure;
       const windSpeedBft = await conversions.windSpeedToBft(latestReading.windspeed);
       const weatherDescription = await conversions.codeToWeatherDescription(latestReading.code);
       const windDirection = await conversions.windDirection(latestReading.winddirection);
       const windChill = await conversions.windChill(tempC, windSpeedBft);
-      const minTemp = await conversions.findMinTemp(readings);
-      const maxTemp = await conversions.findMaxTemp(readings);
       const minWindSpeed = await conversions.findMinWindSpeed(readings);
       const maxWindSpeed = await conversions.findMaxWindSpeed(readings);
       const minPressure = await conversions.findMinPressure(readings);
@@ -27,6 +29,7 @@ export const analytics = {
       return {
         tempC: tempC,
         tempF: tempF,
+        tempTrend: tempTrend,
         pressure: pressure,
         windSpeedBft: windSpeedBft,
         weatherDescription: weatherDescription,
@@ -44,5 +47,31 @@ export const analytics = {
       };
     }
     return null;
+  },
+
+  async tempTrend(readings) {
+    let trend = 0;
+    if (readings.length > 2) {
+      const values = [
+        readings[readings.length - 3].temp,
+        readings[readings.length - 2].temp,
+        readings[readings.length - 1].temp,
+      ];
+      trend = await this.calcTrend(values);
+      console.log("trend check:" + trend); // check to be sure the readings calculate correctly
+    }
+    return trend;
+  },
+
+  async calcTrend(values) {
+    let trend = 0;
+    if (values.length > 2) {
+      if (values[2] > values[1] && values[1] > values[0]) {
+        trend = 1;
+      } else if (values[2] < values[1] && values[1] < values[0]) {
+        trend = -1;
+      }
+    }
+    return trend;
   },
 };

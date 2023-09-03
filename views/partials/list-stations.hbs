@@ -1,24 +1,31 @@
 {{#each stations}}
-  <div class="box box-link-hover-shadow">
-    <h2 class="title has-text-centered">
-      {{title}}
-    </h2>
-    <section class="content">
-      <p class="has-text-gray has-text-centered">
-        Latitude:
-        {{latitude}}
-        Longitude:
-        {{longitude}}
-      </p>
-    </section>
-    {{#with (lookup ../latestWeatherDashboard @index)}}
-      {{> cards latestWeather=this}}
-    {{/with}}
-    <a href="/station/{{_id}}" class="icon has-text-primary">
-      {{>icons/open}}
-    </a>
-    <a href="/dashboard/deletestation/{{_id}}" class="button">
-    {{>icons/delete}}
-  </a>
+  <div class="card">
+    <header class="card-header has-background-primary">
+      <p class="card-header-title has-text-white is-centered">{{title}}</p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <div class="has-text-centered">
+          <p class="has-text-grey">
+            Latitude: {{latitude}} | Longitude: {{longitude}}
+          </p>
+        </div>
+        {{#with (lookup ../latestWeatherDashboard @index)}}
+          {{> cards latestWeather=this}}
+        {{/with}}
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="/station/{{_id}}" class="card-footer-item has-text-primary">
+        {{>icons/open}}
+      </a>
+      <a href="/dashboard/deletestation/{{_id}}" class="card-footer-item">
+        {{>icons/delete}}
+      </a>
+    </footer>
   </div>
 {{/each}}
+
+
+
+
